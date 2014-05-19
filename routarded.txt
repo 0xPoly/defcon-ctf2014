@@ -29,7 +29,7 @@
 Ever see cool kids playing their fancy CTFs? Want to be cool like them? Then this guide is for you!
 
 Based on the "routarded" challenge from Defcon CTF 2014 Qualification Round. All credits for the 
-challenge go out to @legitbs
+challenge go out to @LegitBS_CTF
 
 *** routarded ***
 
