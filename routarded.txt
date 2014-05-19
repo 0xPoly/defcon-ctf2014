@@ -1,8 +1,11 @@
+************************************************
 ==== Intro to Capture the Flag Competitions ====
 ************************************************
-                by OxPoly
+                by @OxPoly
 
-Based on the Defcon CTF 2014 Qualification Round.
+Ever see cool kids playing their fancy CTFs? Want to be cool like them? Then this guide is for you!
+
+Based on the "routarded" challenge from Defcon CTF 2014 Qualification Round. All credits for the challenge go out to @legitbs
 
 *** routarded ***
 
@@ -60,3 +63,7 @@ of the flag file) in place of the "ls". The flag should pop right up.
 P.S. Flag should be "I don't belive people still do this" with some random numbers attached.
 
 Congratulations, you can now computer! 
+
+== Questions? ==
+
+Send them at me: https://twitter.com/0xPoly
