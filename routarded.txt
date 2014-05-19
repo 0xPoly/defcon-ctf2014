@@ -65,7 +65,7 @@ different combinations until you are let in.
 P.S.: if it was taking you too long to figure the correct username/password, you could use a tool 
 called "hydra" to help you. The use of hydra, however, is outside the scope of this tutorial.
 
-P.P.S.: the correct username password pair was (none):Admin if I recall correctly
+P.P.S.: the correct username password pair was (none):admin if I recall correctly
 
 == Step 3: Looking Around ==
 
