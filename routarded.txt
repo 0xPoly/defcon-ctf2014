@@ -1,0 +1,42 @@
+==== Intro to Capture the Flag Competitions ====
+************************************************
+                by OxPoly
+
+Based on the Defcon CTF 2014 Qualification Round.
+
+*** routarded ***
+
+== Challenge Description ==
+
+Wow, they forwarded http on a router with default creds?
+http://routarded_87f7837f50a5370771b9467d840c93c5.2014.shallweplayaga.me:5000/ 
+
+== Intro ==
+
+This guide is written for the CTF beginner as a primer into the CTF and infosec world. If you are just looking for the solution, feel free to skip forward. 
+
+In a Capture the Flag event, or a CTF, teams compete against each other and the clock to obtain the largest number of "flags". A flag is simply a text string (a sentence, if you will) located is some difficult to access part of the challenge. By entering the flag into the system, you are able to prove that you understand the challenge and were able to beat it. More flags, more win.
+
+== Step 1: Identification == 
+
+We are given a link (http://routarded_87f7837f50a5370771b9467d840c93c5.2014.shallweplayaga.me:5000/). When copy-pasting this link to your URL bar and pressing enter, one is greeted with a login prompt. It's asking for a username and password.
+
+== Step 2: Logging In ==
+
+The challenge description says that the router is still on default creds. "Default creds" means the Username and Password that the factory enters into the device when making it have not been changed. Simply find a list of defualt passwords (here is one: http://www.phenoelit.org/dpl/dpl.html) and try different combinations until you are let in. 
+
+P.S.: if it was taking you too long to figure the correct username/password, you could use a tool called "hydra" to help you. The use of hydra, however, is outside the scope of this tutorial.
+
+P.P.S.: the correct username password pair was (none):Admin if I recall correctly
+
+== Step 3: Looking Around ==
+
+You now find your self able to use the device. However, there still is no flag. So, there must be something more to it. We find several interesting fields. One in particular is very interesting: the "ping" field. Normally, the ping field checks if your internet connection is active by "pinging" a server that you specify. For example, running "ping google.com" (without quotations) will send several pings to the Google server. Due to the nature of this field, we are able to enter any text into it. But what if we could enter a specific text that could force the router to give us the flag that is stored in it?
+
+++ Step 4: Pwnage ++
+
+Try entering "google.com; ls" into the field. The ";" tells the operating system that we are entering an additional command, while the "ls" simply means list directory or list the contents of the folder. You will notice that the ";" is suddenly ommitted when you press enter. In fact, if you check the source code of the page, you will find a little sniplet of code that attempts to stop this very type of attack. However, there is a way around it, of course :). Using the Firefox web browser, install the "Tamper Data" plugin. Restart the browser, then hit "alt", Tools -> Tamper Data -> Start Tamper. Then retype "google.com; ls" and click on the "Tamper" button that pops up. Replace "google.com ls" with "google.com; ls" and hit enter. You will notice that the folder listing shows up with a file called flag! All we now need to do is repeat the earlier steps, just replacing "cat flag" (or read the contents of the flag file) in place of the "ls". The flag should pop right up.
+
+P.S. Flag should be "I don't belive people still do this" with some random numbers attached.
+
+Congratulations, you can now computer! 
